@@ -12432,6 +12432,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1183560115}
     m_Modifications:
+    - target: {fileID: 7616069094056801752, guid: 369456f238c2221498ccdf16df24b160, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8264468213022692365, guid: 369456f238c2221498ccdf16df24b160, type: 3}
       propertyPath: m_Name
       value: Candle_Skull_Lit
