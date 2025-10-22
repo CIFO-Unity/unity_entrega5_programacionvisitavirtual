@@ -3609,7 +3609,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 239463975}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1680854298}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: CambiarColorLuzLuna
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Azul
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &239463975
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16890,7 +16902,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1118105117}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1680854298}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: CambiarColorLuzLuna
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Rojo
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1118105117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25955,6 +25979,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1635427175}
+  luna: {fileID: 410087039}
+  sliderIntensidadLuna: {fileID: 2090897765}
 --- !u!1001 &1683663831
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28001,7 +28027,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1826310557}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1680854298}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: CambiarColorLuzLuna
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Amarillo
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1826310557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30617,12 +30655,24 @@ MonoBehaviour:
   m_HandleRect: {fileID: 736985618}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 20
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1680854298}
+        m_TargetAssemblyTypeName: UIController, Assembly-CSharp
+        m_MethodName: CambiarIntensidadLuzLuna
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &2095842832
 PrefabInstance:
   m_ObjectHideFlags: 0
