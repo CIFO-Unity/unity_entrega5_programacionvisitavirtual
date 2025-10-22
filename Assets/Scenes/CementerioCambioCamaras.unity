@@ -2528,6 +2528,7 @@ GameObject:
   - component: {fileID: 153365479}
   - component: {fileID: 153365478}
   - component: {fileID: 153365477}
+  - component: {fileID: 153365480}
   m_Layer: 5
   m_Name: ButtonCamaraAltarLibro
   m_TagString: Untagged
@@ -2598,7 +2599,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 153365478}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 153365480}
+        m_TargetAssemblyTypeName: CameraSwitch, Assembly-CSharp
+        m_MethodName: ActivateThisCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &153365478
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2637,6 +2650,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153365475}
   m_CullTransparentMesh: 1
+--- !u!114 &153365480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153365475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691e1b5e80f174b4f93a38bab65eec2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 1676999239}
 --- !u!1001 &158565225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4550,6 +4576,7 @@ GameObject:
   - component: {fileID: 307020892}
   - component: {fileID: 307020891}
   - component: {fileID: 307020890}
+  - component: {fileID: 307020893}
   m_Layer: 5
   m_Name: ButtonAtaudes
   m_TagString: Untagged
@@ -4620,7 +4647,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 307020891}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 307020893}
+        m_TargetAssemblyTypeName: CameraSwitch, Assembly-CSharp
+        m_MethodName: ActivateThisCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &307020891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4659,6 +4698,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 307020888}
   m_CullTransparentMesh: 1
+--- !u!114 &307020893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307020888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691e1b5e80f174b4f93a38bab65eec2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 1087587353}
 --- !u!1001 &311121339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11858,7 +11910,7 @@ GameObject:
   m_Component:
   - component: {fileID: 822284789}
   m_Layer: 0
-  m_Name: Cameras
+  m_Name: Camaras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16896,6 +16948,7 @@ GameObject:
   - component: {fileID: 1163636592}
   - component: {fileID: 1163636591}
   - component: {fileID: 1163636590}
+  - component: {fileID: 1163636593}
   m_Layer: 5
   m_Name: ButtonBruja
   m_TagString: Untagged
@@ -16966,7 +17019,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1163636591}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1163636593}
+        m_TargetAssemblyTypeName: CameraSwitch, Assembly-CSharp
+        m_MethodName: ActivateThisCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1163636591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17005,6 +17070,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163636588}
   m_CullTransparentMesh: 1
+--- !u!114 &1163636593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1163636588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691e1b5e80f174b4f93a38bab65eec2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 1545630248}
 --- !u!1001 &1167002939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20789,6 +20867,7 @@ GameObject:
   - component: {fileID: 1462211428}
   - component: {fileID: 1462211427}
   - component: {fileID: 1462211426}
+  - component: {fileID: 1462211429}
   m_Layer: 5
   m_Name: ButtonFantasmas
   m_TagString: Untagged
@@ -20859,7 +20938,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1462211427}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1462211429}
+        m_TargetAssemblyTypeName: CameraSwitch, Assembly-CSharp
+        m_MethodName: ActivateThisCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1462211427
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20898,6 +20989,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1462211424}
   m_CullTransparentMesh: 1
+--- !u!114 &1462211429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462211424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691e1b5e80f174b4f93a38bab65eec2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 68439789}
 --- !u!1001 &1472372014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22541,6 +22645,7 @@ GameObject:
   - component: {fileID: 1537691348}
   - component: {fileID: 1537691347}
   - component: {fileID: 1537691346}
+  - component: {fileID: 1537691349}
   m_Layer: 5
   m_Name: ButtonCamaraEntrada
   m_TagString: Untagged
@@ -22611,7 +22716,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1537691347}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1537691349}
+        m_TargetAssemblyTypeName: CameraSwitch, Assembly-CSharp
+        m_MethodName: ActivateThisCamera
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1537691347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22650,6 +22767,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537691344}
   m_CullTransparentMesh: 1
+--- !u!114 &1537691349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537691344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 691e1b5e80f174b4f93a38bab65eec2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetCamera: {fileID: 1629362149}
 --- !u!1001 &1538295271
 PrefabInstance:
   m_ObjectHideFlags: 0
