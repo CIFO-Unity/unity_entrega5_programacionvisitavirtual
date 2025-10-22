@@ -555,8 +555,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "C\xE1mara Fantasmas\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 19e0c4b13b0cc4ef28ee0baf530ec057, type: 2}
-  m_sharedMaterial: {fileID: -3051173614164790311, guid: 19e0c4b13b0cc4ef28ee0baf530ec057, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1493,7 +1493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.69057405
+      value: -0.9544216
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1501,7 +1501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7232617
+      value: 0.29846188
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1513,7 +1513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 267.351
+      value: 325.269
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -4413,8 +4413,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "C\xE1mara Altar\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 19e0c4b13b0cc4ef28ee0baf530ec057, type: 2}
-  m_sharedMaterial: {fileID: -3051173614164790311, guid: 19e0c4b13b0cc4ef28ee0baf530ec057, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6040,7 +6040,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.87384
+      value: -22.95
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6048,11 +6048,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.8803673
+      value: -12.53
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.082001716
+      value: -0.019357141
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6060,7 +6060,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.9966322
+      value: 0.99981266
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.z
@@ -6072,7 +6072,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 189.407
+      value: 182.218
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -9113,7 +9113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.72888184
+      value: 0.33196568
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.x
@@ -9121,7 +9121,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.6846395
+      value: 0.9432915
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.z
@@ -9133,7 +9133,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 86.415
+      value: 141.224
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -11205,8 +11205,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "C\xE1mara Entrada\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 19e0c4b13b0cc4ef28ee0baf530ec057, type: 2}
-  m_sharedMaterial: {fileID: -3051173614164790311, guid: 19e0c4b13b0cc4ef28ee0baf530ec057, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -16402,7 +16402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.76313984
+      value: -0.9917892
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.x
@@ -16410,7 +16410,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.64623344
+      value: 0.12788357
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.z
@@ -16422,7 +16422,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 279.484
+      value: 345.305
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -27742,8 +27742,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "C\xE1mara Bruja\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 19e0c4b13b0cc4ef28ee0baf530ec057, type: 2}
-  m_sharedMaterial: {fileID: -3051173614164790311, guid: 19e0c4b13b0cc4ef28ee0baf530ec057, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -29165,8 +29165,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "C\xE1mara Ata\xFAdes\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 19e0c4b13b0cc4ef28ee0baf530ec057, type: 2}
-  m_sharedMaterial: {fileID: -3051173614164790311, guid: 19e0c4b13b0cc4ef28ee0baf530ec057, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -29882,7 +29882,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.69057405
+      value: 0.03889028
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.x
@@ -29890,7 +29890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7232617
+      value: 0.9992435
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalRotation.z
@@ -29902,7 +29902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 267.351
+      value: 175.542
       objectReference: {fileID: 0}
     - target: {fileID: 5953317577179738959, guid: f24c94125f67fd1428db4b54c387fbef, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
