@@ -13,9 +13,16 @@ public class UIController : MonoBehaviour
     [SerializeField]
     private GameObject sliderIntensidadLuna;
 
+    private GameObject[] calabazas;
+
+    [SerializeField]
+    private GameObject sliderIntensidadCalabazas;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Luz de la luna
+
         Light luzLuna = luna.GetComponent<Light>();
 
         if (luzLuna != null && sliderIntensidadLuna != null)
@@ -24,6 +31,22 @@ public class UIController : MonoBehaviour
             sliderIntensidadLuna.gameObject.GetComponent<Slider>().value = luzLuna.intensity;
         }
 
+
+        // Luces de las calabazas
+
+        calabazas = GameObject.FindGameObjectsWithTag("Calabaza");
+
+        if (calabazas.Length > 0 && sliderIntensidadCalabazas != null)
+        {
+            // Suponemos que la luz es el primer hijo de la calabaza
+            Light luzPrimeraCalabaza = calabazas[0].transform.GetChild(0).GetComponent<Light>();
+
+            if (luzPrimeraCalabaza != null)
+            {
+                // Asignar al slider la intensidad actual de la luz
+                sliderIntensidadCalabazas.GetComponent<Slider>().value = luzPrimeraCalabaza.intensity;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -49,7 +72,7 @@ public class UIController : MonoBehaviour
             luzLuna.intensity = sliderIntensidadLuna.gameObject.GetComponent<Slider>().value;
         }
     }
-    
+
 
     public void CambiarColorLuzLuna(string color)
     {
@@ -61,11 +84,67 @@ public class UIController : MonoBehaviour
 
             if (color == "Rojo")
                 colorLuna = new Color(238f / 255f, 64f / 255f, 84f / 255f); // Rojo
-            else if(color == "Amarillo")
+            else if (color == "Amarillo")
                 colorLuna = new Color(235f / 255f, 238f / 255f, 64f / 255f); // Amarillo
 
             // Cambiar el color del filtro (color de la luz)
             luzLuna.color = colorLuna;
         }
     }
+
+
+    public void CambiarIntensidadLuzCalabazas()
+    {
+        if (calabazas != null)
+        {
+            foreach (GameObject calabaza in calabazas)
+            {
+                if (calabaza.transform.childCount > 0)
+                {
+                    // Suponemos que el hijo es la Point Light
+                    Transform hijo = calabaza.transform.GetChild(0);
+                    Light luz = hijo.GetComponent<Light>();
+
+                    if (luz != null)
+                    {
+                        // Cambiar intensidad
+                        luz.intensity = sliderIntensidadCalabazas.gameObject.GetComponent<Slider>().value;
+                    }
+                }
+            }
+        }
+    }
+    
+
+        public void CambiarColorLuzCalabazas(string color)
+    {
+        if (calabazas != null)
+        {
+            foreach (GameObject calabaza in calabazas)
+            {
+                if (calabaza.transform.childCount > 0)
+                {
+                    // Suponemos que el hijo es la Point Light
+                    Transform hijo = calabaza.transform.GetChild(0);
+                    Light luz = hijo.GetComponent<Light>();
+
+                    if (luz != null)
+                    {
+                        // Cambiar color
+
+                        Color colorCalabazas = new Color(255f / 255f, 109f / 255f, 0f / 255f); // Naranja por defecto
+
+                        if (color == "Lila")
+                            colorCalabazas = new Color(238f / 255f, 64f / 255f, 210f / 255f); // Lila
+                        else if (color == "Verde")
+                            colorCalabazas = new Color(0.251f, 0.933f, 0.275f); // Verde
+
+                        // Cambiar el color del filtro (color de la luz)
+                        luz.color = colorCalabazas;
+                    }
+                }
+            }
+        }
+    }
+
 }
