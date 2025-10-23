@@ -2,7 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIController : MonoBehaviour
+public class LightsController : MonoBehaviour
 {
     [Header("Canvas")]
     [SerializeField]
