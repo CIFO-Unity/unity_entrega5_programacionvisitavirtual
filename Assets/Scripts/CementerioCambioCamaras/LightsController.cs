@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LightsController : MonoBehaviour
 {
@@ -20,6 +21,9 @@ public class LightsController : MonoBehaviour
 
     [SerializeField]
     private GameObject sliderIntensidadLuna;
+
+    [SerializeField] 
+    private Button botonApagarLuzLuna;
 
 
     [Header("Calabazas")]
@@ -137,11 +141,15 @@ public class LightsController : MonoBehaviour
     public void CambiarIntensidadLuzLuna()
     {
         Light luzLuna = luna.GetComponent<Light>();
+        Slider slider = sliderIntensidadLuna.GetComponent<Slider>();
 
-        if (luzLuna != null)
+        if (luzLuna != null && slider != null)
         {
-            // Cambiar la intensidad
-            luzLuna.intensity = sliderIntensidadLuna.gameObject.GetComponent<Slider>().value;
+            // Solo cambiar la intensidad si la luz está encendida
+            if (luzLuna.enabled)
+            {
+                luzLuna.intensity = slider.value;
+            }
         }
     }
 
@@ -172,6 +180,50 @@ public class LightsController : MonoBehaviour
             }
         }
     }
+
+   public void ToggleLuzLuna()
+    {
+        Light luzLuna = luna.GetComponent<Light>();
+        Slider slider = sliderIntensidadLuna.GetComponent<Slider>();
+
+        if (luzLuna != null && slider != null)
+        {
+            if (luzLuna.enabled)
+            {
+                // Apagar luz: desactivar y poner intensidad a 0
+                luzLuna.enabled = false;
+                luzLuna.intensity = 0f;
+            }
+            else
+            {
+                // Encender luz: activar y usar la intensidad actual del slider
+                luzLuna.enabled = true;
+                luzLuna.intensity = slider.value;
+            }
+
+            // Actualizar el texto del botón
+            ActualizarTextoBotonLuna();
+        }
+    }
+
+
+    private void ActualizarTextoBotonLuna()
+    {
+        if (botonApagarLuzLuna != null && luna != null)
+        {
+            Light luzLuna = luna.GetComponent<Light>();
+            if (luzLuna != null)
+            {
+                // Tomar el TMP_Text hijo automáticamente
+                TMP_Text textoBoton = botonApagarLuzLuna.GetComponentInChildren<TMP_Text>();
+                if (textoBoton != null)
+                {
+                    textoBoton.text = luzLuna.enabled ? "Apagar" : "Encender";
+                }
+            }
+        }
+    }
+
 
     #endregion
 
