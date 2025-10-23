@@ -105,3 +105,6 @@ InitTestScene*.unity*
 
 # Thumbnails
 ._*
+
+# Ignorar asset TextMesh Pro específico generado localmente
+"Assets/TextMesh Pro/Resources/Fonts & Materials/Enchanted Land SDF 1.asset"

@@ -1,14 +1,18 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class LightsController : MonoBehaviour
 {
     [Header("Canvas")]
+
     [SerializeField]
     private GameObject canvas;
 
+
     [Header("Luna")]
+
     [SerializeField]
     private GameObject luna;
 
@@ -18,25 +22,36 @@ public class LightsController : MonoBehaviour
     [SerializeField]
     private GameObject sliderIntensidadLuna;
 
+    [SerializeField] 
+    private Button botonApagarLuzLuna;
+
 
     [Header("Calabazas")]
-    private GameObject[] calabazas;
 
-    [SerializeField] 
+    [SerializeField]
     private Button[] botonesCalabazas;
 
     [SerializeField]
     private GameObject sliderIntensidadCalabazas;
 
+    [SerializeField] 
+    private Button botonApagarCalabazas;
+    
+    private GameObject[] calabazas;
+
 
     [Header("Farolas")]
-    private GameObject[] farolas;
 
     [SerializeField] 
     private Button[] botonesFarolas;
 
     [SerializeField]
     private GameObject sliderIntensidadFarolas;
+
+    [SerializeField] 
+    private Button botonApagarFarolas;
+
+    private GameObject[] farolas;
 
 
     #region Start & Update
@@ -132,11 +147,15 @@ public class LightsController : MonoBehaviour
     public void CambiarIntensidadLuzLuna()
     {
         Light luzLuna = luna.GetComponent<Light>();
+        Slider slider = sliderIntensidadLuna.GetComponent<Slider>();
 
-        if (luzLuna != null)
+        if (luzLuna != null && slider != null)
         {
-            // Cambiar la intensidad
-            luzLuna.intensity = sliderIntensidadLuna.gameObject.GetComponent<Slider>().value;
+            // Solo cambiar la intensidad si la luz está encendida
+            if (luzLuna.enabled)
+            {
+                luzLuna.intensity = slider.value;
+            }
         }
     }
 
@@ -168,6 +187,50 @@ public class LightsController : MonoBehaviour
         }
     }
 
+   public void ToggleLuzLuna()
+    {
+        Light luzLuna = luna.GetComponent<Light>();
+        Slider slider = sliderIntensidadLuna.GetComponent<Slider>();
+
+        if (luzLuna != null && slider != null)
+        {
+            if (luzLuna.enabled)
+            {
+                // Apagar luz: desactivar y poner intensidad a 0
+                luzLuna.enabled = false;
+                luzLuna.intensity = 0f;
+            }
+            else
+            {
+                // Encender luz: activar y usar la intensidad actual del slider
+                luzLuna.enabled = true;
+                luzLuna.intensity = slider.value;
+            }
+
+            // Actualizar el texto del botón
+            ActualizarTextoBotonLuna();
+        }
+    }
+
+
+    private void ActualizarTextoBotonLuna()
+    {
+        if (botonApagarLuzLuna != null && luna != null)
+        {
+            Light luzLuna = luna.GetComponent<Light>();
+            if (luzLuna != null)
+            {
+                // Tomar el TMP_Text hijo automáticamente
+                TMP_Text textoBoton = botonApagarLuzLuna.GetComponentInChildren<TMP_Text>();
+                if (textoBoton != null)
+                {
+                    textoBoton.text = luzLuna.enabled ? "Apagar" : "Encender";
+                }
+            }
+        }
+    }
+
+
     #endregion
 
     #region Calabazas
@@ -189,6 +252,56 @@ public class LightsController : MonoBehaviour
                         // Cambiar intensidad
                         luz.intensity = sliderIntensidadCalabazas.gameObject.GetComponent<Slider>().value;
                     }
+                }
+            }
+        }
+    }
+
+
+    public void ToggleLuzCalabazas()
+    {
+        Slider slider = sliderIntensidadCalabazas.GetComponent<Slider>();
+
+        if (calabazas != null && slider != null)
+        {
+            foreach (GameObject calabaza in calabazas)
+            {
+                if (calabaza.transform.childCount > 0)
+                {
+                    Transform hijo = calabaza.transform.GetChild(0);
+                    Light luz = hijo.GetComponent<Light>();
+
+                    if (luz != null)
+                    {
+                        if (luz.enabled)
+                        {
+                            luz.enabled = false;
+                            luz.intensity = 0f;
+                        }
+                        else
+                        {
+                            luz.enabled = true;
+                            luz.intensity = slider.value;
+                        }
+                    }
+                }
+            }
+
+            ActualizarTextoBotonCalabazas();
+        }
+    }
+
+    private void ActualizarTextoBotonCalabazas()
+    {
+        if (botonApagarCalabazas != null && calabazas != null && calabazas.Length > 0)
+        {
+            Light luzPrimera = calabazas[0].transform.GetChild(0).GetComponent<Light>();
+            if (luzPrimera != null)
+            {
+                TMP_Text texto = botonApagarCalabazas.GetComponentInChildren<TMP_Text>();
+                if (texto != null)
+                {
+                    texto.text = luzPrimera.enabled ? "Apagar" : "Encender";
                 }
             }
         }
@@ -257,6 +370,79 @@ public class LightsController : MonoBehaviour
             }
         }
     }
+
+    public void ToggleLuzFarolas()
+    {
+        Slider slider = sliderIntensidadFarolas.GetComponent<Slider>();
+
+        if (farolas != null && slider != null)
+        {
+            foreach (GameObject farola in farolas)
+            {
+                if (farola.transform.childCount > 0)
+                {
+                    Transform hijo = farola.transform.GetChild(0);
+                    Light luz = hijo.GetComponent<Light>();
+
+                    if (luz != null)
+                    {
+                        if (luz.enabled)
+                        {
+                            luz.enabled = false;
+                            luz.intensity = 0f;
+                        }
+                        else
+                        {
+                            luz.enabled = true;
+                            luz.intensity = slider.value;
+                        }
+                    }
+                }
+            }
+
+            ActualizarTextoBotonFarolas();
+        }
+    }
+
+    private void ActualizarTextoBotonFarolas()
+{
+    if (botonApagarFarolas == null)
+    {
+        print("botonApagarFarolas es null");
+        return;
+    }
+
+    if (farolas == null)
+    {
+        print("farolas es null");
+        return;
+    }
+
+    if (farolas.Length == 0)
+    {
+        print("farolas está vacío");
+        return;
+    }
+
+    Light luzPrimera = farolas[0].transform.GetChild(0).GetComponent<Light>();
+    if (luzPrimera == null)
+    {
+        print("No hay Light en el primer hijo de farolas[0]");
+        return;
+    }
+
+    print("YES");
+
+    TMP_Text texto = botonApagarFarolas.GetComponentInChildren<TMP_Text>();
+    if (texto == null)
+    {
+        print("No hay TMP_Text en el botón");
+        return;
+    }
+
+    texto.text = luzPrimera.enabled ? "Apagar" : "Encender";
+}
+
 
     public void CambiarColorLuzFarolas(GameObject boton)
     {
