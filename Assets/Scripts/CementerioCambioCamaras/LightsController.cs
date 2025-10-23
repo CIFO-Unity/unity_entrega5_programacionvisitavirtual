@@ -12,12 +12,18 @@ public class LightsController : MonoBehaviour
     [SerializeField]
     private GameObject luna;
 
+    [SerializeField] 
+    private Button[] botonesLuna;
+
     [SerializeField]
     private GameObject sliderIntensidadLuna;
 
 
     [Header("Calabazas")]
     private GameObject[] calabazas;
+
+    [SerializeField] 
+    private Button[] botonesCalabazas;
 
     [SerializeField]
     private GameObject sliderIntensidadCalabazas;
@@ -26,8 +32,12 @@ public class LightsController : MonoBehaviour
     [Header("Farolas")]
     private GameObject[] farolas;
 
+    [SerializeField] 
+    private Button[] botonesFarolas;
+
     [SerializeField]
     private GameObject sliderIntensidadFarolas;
+
 
     #region Start & Update
 
@@ -42,6 +52,14 @@ public class LightsController : MonoBehaviour
         {
             // Establecer el valor del slider a la intensidad actual de la luz
             sliderIntensidadLuna.gameObject.GetComponent<Slider>().value = luzLuna.intensity;
+        }
+
+        // Botones de la luna
+        for (int i = 0; i < botonesLuna.Length; i++)
+        {
+            Outline outline = botonesLuna[i].GetComponent<Outline>();
+            if (outline != null)
+                outline.enabled = (i == 0); // solo el primer botón activo
         }
 
 
@@ -61,6 +79,14 @@ public class LightsController : MonoBehaviour
             }
         }
 
+        // Botones de las calabazas
+        for (int i = 0; i < botonesCalabazas.Length; i++)
+        {
+            Outline outline = botonesCalabazas[i].GetComponent<Outline>();
+            if (outline != null)
+                outline.enabled = (i == 0); // solo el primer botón activo
+        }
+
 
         // Luces de las farolas
 
@@ -76,6 +102,14 @@ public class LightsController : MonoBehaviour
                 // Asignar al slider la intensidad actual de la luz
                 sliderIntensidadFarolas.GetComponent<Slider>().value = luzPrimeraFarola.intensity;
             }
+        }
+
+        // Botones de las farolas
+        for (int i = 0; i < botonesFarolas.Length; i++)
+        {
+            Outline outline = botonesFarolas[i].GetComponent<Outline>();
+            if (outline != null)
+                outline.enabled = (i == 0); // solo el primer botón activo
         }
     }
 
@@ -120,6 +154,16 @@ public class LightsController : MonoBehaviour
 
                 // Asignar a la luz
                 luzLuna.color = colorLuna;
+            }
+        }
+
+        // Activar el Outline del botón seleccionado y desactivar el de los demás
+        foreach (Button b in botonesLuna)
+        {
+            Outline outline = b.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = (b.gameObject == boton); // solo habilitar en el botón pulsado
             }
         }
     }
@@ -176,6 +220,16 @@ public class LightsController : MonoBehaviour
                 }
             }
         }
+
+        // Activar el Outline del botón seleccionado y desactivar el de los demás
+        foreach (Button b in botonesCalabazas)
+        {
+            Outline outline = b.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = (b.gameObject == boton); // solo habilitar en el botón pulsado
+            }
+        }
     }
 
     #endregion
@@ -228,6 +282,16 @@ public class LightsController : MonoBehaviour
                         }
                     }
                 }
+            }
+        }
+
+        // Activar el Outline del botón seleccionado y desactivar el de los demás
+        foreach (Button b in botonesFarolas)
+        {
+            Outline outline = b.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = (b.gameObject == boton); // solo habilitar en el botón pulsado
             }
         }
     }
