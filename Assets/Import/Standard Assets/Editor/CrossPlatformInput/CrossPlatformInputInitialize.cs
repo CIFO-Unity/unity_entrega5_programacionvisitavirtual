@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEditor;
+using UnityEditor.Build;
 
 namespace UnityStandardAssets.CrossPlatformInput.Inspector
 {
@@ -32,8 +33,6 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
             {
                 case BuildTarget.Android:
                 case BuildTarget.iOS:
-                case BuildTarget.PSM: 
-                case BuildTarget.Tizen: 
                 case BuildTarget.WSAPlayer: 
                     EditorUtility.DisplayDialog("Mobile Input",
                                                 "You have enabled Mobile Input. You'll need to use the Unity Remote app on a connected device to control your game in the Editor.",
@@ -92,8 +91,6 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
             {
                 BuildTargetGroup.Android,
                 BuildTargetGroup.iOS,
-                BuildTargetGroup.PSM, 
-                BuildTargetGroup.Tizen,
                 BuildTargetGroup.WSA 
             };
 
@@ -124,14 +121,17 @@ namespace UnityStandardAssets.CrossPlatformInput.Inspector
                     }
                 }
                 string definesString = string.Join(";", defines.ToArray());
-                PlayerSettings.SetScriptingDefineSymbolsForGroup(group, definesString);
+                var namedBuildTarget = NamedBuildTarget.FromBuildTargetGroup(group);
+                PlayerSettings.SetScriptingDefineSymbols(namedBuildTarget, definesString);
             }
         }
 
 
         private static List<string> GetDefinesList(BuildTargetGroup group)
         {
-            return new List<string>(PlayerSettings.GetScriptingDefineSymbolsForGroup(group).Split(';'));
+            var namedBuildTarget = NamedBuildTarget.FromBuildTargetGroup(group);
+            PlayerSettings.GetScriptingDefineSymbols(namedBuildTarget, out string[] symbols);
+            return new List<string>(symbols);
         }
     }
 }

@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 4.935663, y: 1.3222864, z: -3.5889997}
+        value: {x: 4.900315, y: 1.3191781, z: -3.5889997}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -61,7 +61,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.011999966, y: -0.42, z: -0.01630097}
+        value: {x: 0.011999966, y: 0.834, z: -0.01630097}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -287,7 +287,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 4.935663
+        value: 4.900315
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -317,7 +317,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1.3222864
+        value: 1.3191781
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -566,7 +566,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -0.42
+        value: 0.834
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -606,7 +606,7 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 2
+  - time: 0.41666666
     functionName: SonidoBruja
     data: 
     objectReferenceParameter: {fileID: 0}
