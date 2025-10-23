@@ -5,10 +5,13 @@ using UnityEngine.UI;
 public class LightsController : MonoBehaviour
 {
     [Header("Canvas")]
+
     [SerializeField]
     private GameObject canvas;
 
+
     [Header("Luna")]
+
     [SerializeField]
     private GameObject luna;
 
@@ -20,23 +23,25 @@ public class LightsController : MonoBehaviour
 
 
     [Header("Calabazas")]
-    private GameObject[] calabazas;
 
-    [SerializeField] 
+    [SerializeField]
     private Button[] botonesCalabazas;
 
     [SerializeField]
     private GameObject sliderIntensidadCalabazas;
+    
+    private GameObject[] calabazas;
 
 
     [Header("Farolas")]
-    private GameObject[] farolas;
 
     [SerializeField] 
     private Button[] botonesFarolas;
 
     [SerializeField]
     private GameObject sliderIntensidadFarolas;
+
+    private GameObject[] farolas;
 
 
     #region Start & Update
