@@ -4,19 +4,32 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    [Header("Canvas")]
     [SerializeField]
     private GameObject canvas;
 
+    [Header("Luna")]
     [SerializeField]
     private GameObject luna;
 
     [SerializeField]
     private GameObject sliderIntensidadLuna;
 
+
+    [Header("Calabazas")]
     private GameObject[] calabazas;
 
     [SerializeField]
     private GameObject sliderIntensidadCalabazas;
+
+
+    [Header("Farolas")]
+    private GameObject[] farolas;
+
+    [SerializeField]
+    private GameObject sliderIntensidadFarolas;
+
+    #region Start & Update
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,6 +60,23 @@ public class UIController : MonoBehaviour
                 sliderIntensidadCalabazas.GetComponent<Slider>().value = luzPrimeraCalabaza.intensity;
             }
         }
+
+
+        // Luces de las farolas
+
+        farolas = GameObject.FindGameObjectsWithTag("Farola");
+
+        if (farolas.Length > 0 && sliderIntensidadFarolas != null)
+        {
+            // Suponemos que la luz es el primer hijo de la farola
+            Light luzPrimeraFarola = farolas[0].transform.GetChild(0).GetComponent<Light>();
+
+            if (luzPrimeraFarola != null)
+            {
+                // Asignar al slider la intensidad actual de la luz
+                sliderIntensidadFarolas.GetComponent<Slider>().value = luzPrimeraFarola.intensity;
+            }
+        }
     }
 
     // Update is called once per frame
@@ -61,6 +91,9 @@ public class UIController : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Luna
 
     public void CambiarIntensidadLuzLuna()
     {
@@ -72,7 +105,6 @@ public class UIController : MonoBehaviour
             luzLuna.intensity = sliderIntensidadLuna.gameObject.GetComponent<Slider>().value;
         }
     }
-
 
     public void CambiarColorLuzLuna(string color)
     {
@@ -92,6 +124,9 @@ public class UIController : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Calabazas
 
     public void CambiarIntensidadLuzCalabazas()
     {
@@ -114,9 +149,8 @@ public class UIController : MonoBehaviour
             }
         }
     }
-    
 
-        public void CambiarColorLuzCalabazas(string color)
+    public void CambiarColorLuzCalabazas(string color)
     {
         if (calabazas != null)
         {
@@ -147,4 +181,61 @@ public class UIController : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Farolas
+
+    public void CambiarIntensidadLuzFarolas()
+    {
+        if (farolas != null)
+        {
+            foreach (GameObject farola in farolas)
+            {
+                if (farola.transform.childCount > 0)
+                {
+                    // Suponemos que el hijo es la Point Light
+                    Transform hijo = farola.transform.GetChild(0);
+                    Light luz = hijo.GetComponent<Light>();
+
+                    if (luz != null)
+                    {
+                        // Cambiar intensidad
+                        luz.intensity = sliderIntensidadFarolas.gameObject.GetComponent<Slider>().value;
+                    }
+                }
+            }
+        }
+    }
+
+    public void CambiarColorLuzFarolas(string color)
+    {
+        if (farolas != null)
+        {
+            foreach (GameObject farola in farolas)
+            {
+                if (farola.transform.childCount > 0)
+                {
+                    // Suponemos que el hijo es la Point Light
+                    Transform hijo = farola.transform.GetChild(0);
+                    Light luz = hijo.GetComponent<Light>();
+
+                    if (luz != null)
+                    {
+                        // Color por defecto (amarillo)
+                        Color colorFarolas = new Color(224f / 255f, 210f / 255f, 22f / 255f);
+
+                        if (color == "Lila")
+                            colorFarolas = new Color(98f / 255f, 22f / 255f, 224f / 255f); // Lila
+                        else if (color == "Rojo")
+                            colorFarolas = new Color(224f / 255f, 32f / 255f, 22f / 255f); // Rojo
+
+                        // Cambiar el color de la luz
+                        luz.color = colorFarolas;
+                    }
+                }
+            }
+        }
+    }
+
+    #endregion
 }
