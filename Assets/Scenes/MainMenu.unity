@@ -594,8 +594,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Salir
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
-  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6583,8 +6583,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Cambio C\xE1maras"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
-  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7992,8 +7992,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Primera Persona
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
-  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
