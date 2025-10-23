@@ -106,21 +106,21 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void CambiarColorLuzLuna(string color)
+    public void CambiarColorLuzLuna(GameObject boton)
     {
         Light luzLuna = luna.GetComponent<Light>();
 
-        if (luzLuna != null)
+        if (luzLuna != null && boton != null)
         {
-            Color colorLuna = new Color(64f / 255f, 238f / 255f, 238f / 255f); // Azul por defecto
+            // Obtener el color del Image del botón
+            Image img = boton.GetComponent<Image>();
+            if (img != null)
+            {
+                Color colorLuna = img.color;
 
-            if (color == "Rojo")
-                colorLuna = new Color(238f / 255f, 64f / 255f, 84f / 255f); // Rojo
-            else if (color == "Amarillo")
-                colorLuna = new Color(235f / 255f, 238f / 255f, 64f / 255f); // Amarillo
-
-            // Cambiar el color del filtro (color de la luz)
-            luzLuna.color = colorLuna;
+                // Asignar a la luz
+                luzLuna.color = colorLuna;
+            }
         }
     }
 
@@ -150,31 +150,28 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void CambiarColorLuzCalabazas(string color)
+    public void CambiarColorLuzCalabazas(GameObject boton)
     {
-        if (calabazas != null)
+        if (calabazas != null && boton != null)
         {
-            foreach (GameObject calabaza in calabazas)
+            // Obtener el color del Image del botón
+            Image img = boton.GetComponent<Image>();
+            if (img != null)
             {
-                if (calabaza.transform.childCount > 0)
+                Color colorCalabazas = img.color;
+
+                // Asignar el color a todas las luces de las calabazas
+                foreach (GameObject calabaza in calabazas)
                 {
-                    // Suponemos que el hijo es la Point Light
-                    Transform hijo = calabaza.transform.GetChild(0);
-                    Light luz = hijo.GetComponent<Light>();
-
-                    if (luz != null)
+                    if (calabaza.transform.childCount > 0)
                     {
-                        // Cambiar color
+                        Transform hijo = calabaza.transform.GetChild(0);
+                        Light luz = hijo.GetComponent<Light>();
 
-                        Color colorCalabazas = new Color(255f / 255f, 109f / 255f, 0f / 255f); // Naranja por defecto
-
-                        if (color == "Lila")
-                            colorCalabazas = new Color(238f / 255f, 64f / 255f, 210f / 255f); // Lila
-                        else if (color == "Verde")
-                            colorCalabazas = new Color(0.251f, 0.933f, 0.275f); // Verde
-
-                        // Cambiar el color del filtro (color de la luz)
-                        luz.color = colorCalabazas;
+                        if (luz != null)
+                        {
+                            luz.color = colorCalabazas;
+                        }
                     }
                 }
             }
@@ -207,30 +204,28 @@ public class UIController : MonoBehaviour
         }
     }
 
-    public void CambiarColorLuzFarolas(string color)
+    public void CambiarColorLuzFarolas(GameObject boton)
     {
-        if (farolas != null)
+        if (farolas != null && boton != null)
         {
-            foreach (GameObject farola in farolas)
+            // Obtener el color del Image del botón
+            Image img = boton.GetComponent<Image>();
+            if (img != null)
             {
-                if (farola.transform.childCount > 0)
+                Color colorFarolas = img.color;
+
+                // Asignar el color a todas las luces de las farolas
+                foreach (GameObject farola in farolas)
                 {
-                    // Suponemos que el hijo es la Point Light
-                    Transform hijo = farola.transform.GetChild(0);
-                    Light luz = hijo.GetComponent<Light>();
-
-                    if (luz != null)
+                    if (farola.transform.childCount > 0)
                     {
-                        // Color por defecto (amarillo)
-                        Color colorFarolas = new Color(224f / 255f, 210f / 255f, 22f / 255f);
+                        Transform hijo = farola.transform.GetChild(0);
+                        Light luz = hijo.GetComponent<Light>();
 
-                        if (color == "Lila")
-                            colorFarolas = new Color(98f / 255f, 22f / 255f, 224f / 255f); // Lila
-                        else if (color == "Rojo")
-                            colorFarolas = new Color(224f / 255f, 32f / 255f, 22f / 255f); // Rojo
-
-                        // Cambiar el color de la luz
-                        luz.color = colorFarolas;
+                        if (luz != null)
+                        {
+                            luz.color = colorFarolas;
+                        }
                     }
                 }
             }

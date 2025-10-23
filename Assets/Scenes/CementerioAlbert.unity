@@ -3754,7 +3754,7 @@ GameObject:
   - component: {fileID: 239463975}
   - component: {fileID: 239463974}
   m_Layer: 5
-  m_Name: ButtonAzul
+  m_Name: ButtonLuna1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3826,10 +3826,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1680854298}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: CambiarColorLuzLuna
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 239463972}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Azul
@@ -7606,7 +7606,7 @@ GameObject:
   - component: {fileID: 471563136}
   - component: {fileID: 471563135}
   m_Layer: 5
-  m_Name: ButtonLila
+  m_Name: ButtonFarolas2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7678,10 +7678,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1680854298}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: CambiarColorLuzFarolas
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 471563133}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Lila
@@ -14905,7 +14905,7 @@ GameObject:
   - component: {fileID: 937424830}
   - component: {fileID: 937424829}
   m_Layer: 5
-  m_Name: ButtonAmarillo
+  m_Name: ButtonFarolas1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14977,10 +14977,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1680854298}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: CambiarColorLuzFarolas
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 937424827}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Amarillo
@@ -17880,7 +17880,7 @@ GameObject:
   - component: {fileID: 1118105117}
   - component: {fileID: 1118105116}
   m_Layer: 5
-  m_Name: ButtonRojo
+  m_Name: ButtonLuna2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17952,10 +17952,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1680854298}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: CambiarColorLuzLuna
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1118105114}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Rojo
@@ -19710,7 +19710,7 @@ GameObject:
   - component: {fileID: 1241435851}
   - component: {fileID: 1241435850}
   m_Layer: 5
-  m_Name: ButtonVerde
+  m_Name: ButtonCalabazas3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19782,10 +19782,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1680854298}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: CambiarColorLuzCalabazas
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1241435848}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Verde
@@ -20371,7 +20371,7 @@ GameObject:
   - component: {fileID: 1260970587}
   - component: {fileID: 1260970586}
   m_Layer: 5
-  m_Name: ButtonRojo
+  m_Name: ButtonFarolas3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20443,10 +20443,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1680854298}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: CambiarColorLuzFarolas
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1260970584}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Rojo
@@ -24734,7 +24734,7 @@ GameObject:
   - component: {fileID: 1536087462}
   - component: {fileID: 1536087461}
   m_Layer: 5
-  m_Name: ButtonNaranja
+  m_Name: ButtonCalabazas1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24806,10 +24806,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1680854298}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: CambiarColorLuzCalabazas
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1536087459}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Naranja
@@ -28530,7 +28530,7 @@ GameObject:
   - component: {fileID: 1728828823}
   - component: {fileID: 1728828822}
   m_Layer: 5
-  m_Name: ButtonLila
+  m_Name: ButtonCalabazas2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28602,10 +28602,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1680854298}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: CambiarColorLuzCalabazas
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1728828820}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Lila
@@ -29808,7 +29808,7 @@ GameObject:
   - component: {fileID: 1826310557}
   - component: {fileID: 1826310556}
   m_Layer: 5
-  m_Name: ButtonAmarillo
+  m_Name: ButtonLuna3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29880,10 +29880,10 @@ MonoBehaviour:
       - m_Target: {fileID: 1680854298}
         m_TargetAssemblyTypeName: UIController, Assembly-CSharp
         m_MethodName: CambiarColorLuzLuna
-        m_Mode: 5
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1826310554}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Amarillo
