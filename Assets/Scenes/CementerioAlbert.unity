@@ -28451,18 +28451,24 @@ MonoBehaviour:
   - {fileID: 1826310556}
   sliderIntensidadLuna: {fileID: 2090897765}
   botonApagarLuzLuna: {fileID: 1068221299}
+  iconoLuzLunaOn: {fileID: 21300000, guid: 2fdaf25884e98d8468f6fa7d995c5af4, type: 3}
+  iconoLuzLunaOff: {fileID: 21300000, guid: 31681f5da47536b4ea0096be4a373131, type: 3}
   botonesCalabazas:
   - {fileID: 1536087461}
   - {fileID: 1728828822}
   - {fileID: 1241435850}
   sliderIntensidadCalabazas: {fileID: 228527321}
   botonApagarCalabazas: {fileID: 684258654}
+  iconoLuzCalabazasOn: {fileID: 21300000, guid: 2fdaf25884e98d8468f6fa7d995c5af4, type: 3}
+  iconoLuzCalabazasOff: {fileID: 21300000, guid: 31681f5da47536b4ea0096be4a373131, type: 3}
   botonesFarolas:
   - {fileID: 937424829}
   - {fileID: 471563135}
   - {fileID: 1260970586}
   sliderIntensidadFarolas: {fileID: 2088314439}
   botonApagarFarolas: {fileID: 911643739}
+  iconoLuzFarolasOn: {fileID: 21300000, guid: 2fdaf25884e98d8468f6fa7d995c5af4, type: 3}
+  iconoLuzFarolasOff: {fileID: 21300000, guid: 31681f5da47536b4ea0096be4a373131, type: 3}
 --- !u!114 &1680854299
 MonoBehaviour:
   m_ObjectHideFlags: 0

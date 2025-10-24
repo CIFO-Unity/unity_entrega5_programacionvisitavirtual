@@ -22,8 +22,14 @@ public class LightsController : MonoBehaviour
     [SerializeField]
     private GameObject sliderIntensidadLuna;
 
-    [SerializeField] 
+    [SerializeField]
     private Button botonApagarLuzLuna;
+
+    [SerializeField]
+    private Sprite iconoLuzLunaOn;
+    
+    [SerializeField] 
+    private Sprite iconoLuzLunaOff;
 
 
     [Header("Calabazas")]
@@ -34,8 +40,14 @@ public class LightsController : MonoBehaviour
     [SerializeField]
     private GameObject sliderIntensidadCalabazas;
 
-    [SerializeField] 
+    [SerializeField]
     private Button botonApagarCalabazas;
+
+    [SerializeField]
+    private Sprite iconoLuzCalabazasOn;
+    
+    [SerializeField] 
+    private Sprite iconoLuzCalabazasOff;
     
     private GameObject[] calabazas;
 
@@ -48,8 +60,15 @@ public class LightsController : MonoBehaviour
     [SerializeField]
     private GameObject sliderIntensidadFarolas;
 
-    [SerializeField] 
+    [SerializeField]
     private Button botonApagarFarolas;
+    
+    [SerializeField]
+    private Sprite iconoLuzFarolasOn;
+    
+    [SerializeField] 
+    private Sprite iconoLuzFarolasOff;
+
 
     private GameObject[] farolas;
 
@@ -207,24 +226,23 @@ public class LightsController : MonoBehaviour
                 luzLuna.intensity = slider.value;
             }
 
-            // Actualizar el texto del botón
-            ActualizarTextoBotonLuna();
+            // Actualizar el botón
+            ActualizarSpriteBotonLuna();
         }
     }
 
 
-    private void ActualizarTextoBotonLuna()
+    private void ActualizarSpriteBotonLuna()
     {
         if (botonApagarLuzLuna != null && luna != null)
         {
             Light luzLuna = luna.GetComponent<Light>();
             if (luzLuna != null)
             {
-                // Tomar el TMP_Text hijo automáticamente
-                TMP_Text textoBoton = botonApagarLuzLuna.GetComponentInChildren<TMP_Text>();
-                if (textoBoton != null)
+                Image imagenBoton = botonApagarLuzLuna.GetComponent<Image>();
+                if (imagenBoton != null)
                 {
-                    textoBoton.text = luzLuna.enabled ? "Apagar" : "Encender";
+                    imagenBoton.sprite = luzLuna.enabled ? iconoLuzLunaOn : iconoLuzLunaOff;
                 }
             }
         }
@@ -287,21 +305,21 @@ public class LightsController : MonoBehaviour
                 }
             }
 
-            ActualizarTextoBotonCalabazas();
+            ActualizarSpriteBotonCalabazas();
         }
     }
 
-    private void ActualizarTextoBotonCalabazas()
+    private void ActualizarSpriteBotonCalabazas()
     {
         if (botonApagarCalabazas != null && calabazas != null && calabazas.Length > 0)
         {
             Light luzPrimera = calabazas[0].transform.GetChild(0).GetComponent<Light>();
             if (luzPrimera != null)
             {
-                TMP_Text texto = botonApagarCalabazas.GetComponentInChildren<TMP_Text>();
-                if (texto != null)
+                Image imagenBoton = botonApagarCalabazas.GetComponent<Image>();
+                if (imagenBoton != null)
                 {
-                    texto.text = luzPrimera.enabled ? "Apagar" : "Encender";
+                    imagenBoton.sprite = luzPrimera.enabled ? iconoLuzCalabazasOn : iconoLuzCalabazasOff;
                 }
             }
         }
@@ -400,49 +418,25 @@ public class LightsController : MonoBehaviour
                 }
             }
 
-            ActualizarTextoBotonFarolas();
+            ActualizarSpriteBotonFarolas();
         }
     }
 
-    private void ActualizarTextoBotonFarolas()
-{
-    if (botonApagarFarolas == null)
+    private void ActualizarSpriteBotonFarolas()
     {
-        print("botonApagarFarolas es null");
-        return;
+        if (botonApagarFarolas != null && farolas != null && farolas.Length > 0)
+        {
+            Light luzPrimera = farolas[0].transform.GetChild(0).GetComponent<Light>();
+            if (luzPrimera != null)
+            {
+                Image imagenBoton = botonApagarFarolas.GetComponent<Image>();
+                if (imagenBoton != null)
+                {
+                    imagenBoton.sprite = luzPrimera.enabled ? iconoLuzFarolasOn : iconoLuzFarolasOff;
+                }
+            }
+        }
     }
-
-    if (farolas == null)
-    {
-        print("farolas es null");
-        return;
-    }
-
-    if (farolas.Length == 0)
-    {
-        print("farolas está vacío");
-        return;
-    }
-
-    Light luzPrimera = farolas[0].transform.GetChild(0).GetComponent<Light>();
-    if (luzPrimera == null)
-    {
-        print("No hay Light en el primer hijo de farolas[0]");
-        return;
-    }
-
-    print("YES");
-
-    TMP_Text texto = botonApagarFarolas.GetComponentInChildren<TMP_Text>();
-    if (texto == null)
-    {
-        print("No hay TMP_Text en el botón");
-        return;
-    }
-
-    texto.text = luzPrimera.enabled ? "Apagar" : "Encender";
-}
-
 
     public void CambiarColorLuzFarolas(GameObject boton)
     {
