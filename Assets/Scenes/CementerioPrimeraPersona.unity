@@ -4726,6 +4726,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2124827229904174606, guid: 0604ce9b58da7114aa77bfa1ef820aea, type: 3}
   m_PrefabInstance: {fileID: 338275812}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &342667750 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2892411712762447531, guid: 213d2b56253be4d4cbfb202ddb822757, type: 3}
+  m_PrefabInstance: {fileID: 1075387900}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &343948176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4796,12 +4801,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 9056610842965849164, guid: f4bac38393fc7464b8860f011c565933, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 343948180}
-    - targetCorrespondingSourceObject: {fileID: 9056610842965849164, guid: f4bac38393fc7464b8860f011c565933, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 343948179}
-    - targetCorrespondingSourceObject: {fileID: 9056610842965849164, guid: f4bac38393fc7464b8860f011c565933, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 343948181}
     - targetCorrespondingSourceObject: {fileID: 9056610842965849164, guid: f4bac38393fc7464b8860f011c565933, type: 3}
       insertIndex: -1
@@ -4817,48 +4816,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 9056610842965849164, guid: f4bac38393fc7464b8860f011c565933, type: 3}
   m_PrefabInstance: {fileID: 343948176}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &343948179
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 343948178}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 0.1, z: 1.03}
-  m_Center: {x: -2.56, y: 0.26, z: -1.94}
---- !u!65 &343948180
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 343948178}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 0.1, z: 1.05}
-  m_Center: {x: -2.56, y: 0.1, z: 0.91}
 --- !u!114 &343948181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4872,9 +4829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puertaAnimator: {fileID: 343948182}
-  nombreParametroAnimacion: AbrirPuertas
-  desactivarColliderAlAbrir: 0
-  mostrarMensajes: 1
+  nombreParametroAnimacion: estadoPuertas
 --- !u!95 &343948182 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 8166682205180462307, guid: f4bac38393fc7464b8860f011c565933, type: 3}
@@ -4895,7 +4850,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -14892,11 +14847,33 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2892411712762447531, guid: 213d2b56253be4d4cbfb202ddb822757, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1075387902}
   m_SourcePrefab: {fileID: 100100000, guid: 213d2b56253be4d4cbfb202ddb822757, type: 3}
 --- !u!4 &1075387901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2551352463736364049, guid: 213d2b56253be4d4cbfb202ddb822757, type: 3}
+  m_PrefabInstance: {fileID: 1075387900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1075387902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342667750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4292771767b9f114f9d22f22beeebe31, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ataudAnimator: {fileID: 1075387904}
+  nombreTriggerAbrir: estadoAtaud
+--- !u!95 &1075387904 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1303465583934884167, guid: 213d2b56253be4d4cbfb202ddb822757, type: 3}
   m_PrefabInstance: {fileID: 1075387900}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1084215439
@@ -15905,9 +15882,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camaraJugador: {fileID: 1212103279}
-  distanciaMaxima: 10
+  distanciaMaxima: 5
   teclaInteraccion: 323
-  mostrarRaycast: 1
 --- !u!1001 &1150985311
 PrefabInstance:
   m_ObjectHideFlags: 0

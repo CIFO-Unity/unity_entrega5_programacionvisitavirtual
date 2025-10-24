@@ -1,19 +1,19 @@
 using UnityEngine;
 
-public class PuertaTrigger : MonoBehaviour
+public class PuertaTrigger : MonoBehaviour, IInteractuable
 {
     [Header("Configuración")]
     [Tooltip("Animator de la puerta")]
     public Animator puertaAnimator;
     
     [Tooltip("Nombre del parámetro bool en el Animator (true=abierta, false=cerrada)")]
-    public string nombreParametroAnimacion = "estadoPuertas";
+    public string nombreParametroAnimacion = "estadoPuertas";//variable bool activar animacion
     
 
     
     private bool puertaAbierta = false;
 
-    // Este método se llama cuando el jugador hace clic estando cerca
+    // Este método lo llama el player cuando hace clic estando cerca
     public void Interactuar()
     {
         if (puertaAnimator == null)

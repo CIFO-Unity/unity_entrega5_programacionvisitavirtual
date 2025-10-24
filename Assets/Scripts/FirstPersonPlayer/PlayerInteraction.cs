@@ -45,13 +45,13 @@ public class PlayerInteraction : MonoBehaviour
         // Usar QueryTriggerInteraction.Collide para detectar también triggers
         if (Physics.Raycast(ray, out hit, distanciaMaxima, ~0, QueryTriggerInteraction.Collide))
         {
-            // Buscar el componente PuertaTrigger en el objeto o en sus padres
-            PuertaTrigger puerta = hit.collider.GetComponentInParent<PuertaTrigger>();
+            // Buscar cualquier componente que implemente IInteractuable
+            IInteractuable interactuable = hit.collider.GetComponentInParent<IInteractuable>();
             
-            if (puerta != null)
+            if (interactuable != null)
             {
-                // Interactuar con la puerta
-                puerta.Interactuar();
+                // Interactuar con el objeto (puerta, jaula, cofre, etc.)
+                interactuable.Interactuar();
             }
         }
     }
