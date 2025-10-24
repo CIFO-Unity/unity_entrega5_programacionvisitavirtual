@@ -14,17 +14,8 @@ public class CameraSwitch : MonoBehaviour
     [Tooltip("Nombre del parámetro del Animator (ej: 'Abrir', 'estadoPuertas')")]
     [SerializeField] private string nombreParametro = "estadoPuertas";
 
-    private static bool ignorarClicEsteFrame = false;
-
     private void Update()
     {
-        // Si se debe ignorar el clic este frame, resetear y salir
-        if (ignorarClicEsteFrame)
-        {
-            ignorarClicEsteFrame = false;
-            return;
-        }
-
         // Verificar si MI cámara está activa Y si hay animador asignado
         // IMPORTANTE: No ejecutar si el clic es sobre UI
         if (targetCamera != null && targetCamera.enabled && 
@@ -42,9 +33,6 @@ public class CameraSwitch : MonoBehaviour
             Debug.LogError("No hay cámara asignada en " + gameObject.name);
             return;
         }
-
-        // IGNORAR el clic de este frame para evitar activaciones múltiples
-        ignorarClicEsteFrame = true;
 
         // PRIMERO: Resetear todas las animaciones
         CameraSwitch[] todosLosSwitches = FindObjectsByType<CameraSwitch>(FindObjectsSortMode.None);
