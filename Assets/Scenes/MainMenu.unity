@@ -963,7 +963,7 @@ MonoBehaviour:
   "tama\xF1oFuenteNormal": 63.62
   colorNormal: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   intensidadNormal: 1
-  "tama\xF1oFuenteHover": 50
+  "tama\xF1oFuenteHover": 40
   colorHover: {r: 0.7490196, g: 0.03886421, b: 0.03886421, a: 0.31764707}
   intensidadHover: 1
   velocidadTransicion: 10
@@ -1439,7 +1439,7 @@ MonoBehaviour:
   "tama\xF1oFuenteNormal": 63.62
   colorNormal: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   intensidadNormal: 1
-  "tama\xF1oFuenteHover": 50
+  "tama\xF1oFuenteHover": 40
   colorHover: {r: 0.7490196, g: 0.03886421, b: 0.03886421, a: 0.31764707}
   intensidadHover: 1
   velocidadTransicion: 10
@@ -6583,7 +6583,7 @@ MonoBehaviour:
   "tama\xF1oFuenteNormal": 63.62
   colorNormal: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   intensidadNormal: 1
-  "tama\xF1oFuenteHover": 50
+  "tama\xF1oFuenteHover": 40
   colorHover: {r: 0.7490196, g: 0.03886421, b: 0.03886421, a: 0.31764707}
   intensidadHover: 1
   velocidadTransicion: 10
