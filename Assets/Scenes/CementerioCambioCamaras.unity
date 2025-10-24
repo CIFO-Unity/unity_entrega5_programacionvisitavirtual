@@ -555,8 +555,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "C\xE1mara Fantasmas\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
-  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2663,6 +2663,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 1676999239}
+  animatorObjetivo: {fileID: 36988632}
+  nombreParametro: estadoLibros
 --- !u!1001 &158565225
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4417,8 +4419,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "C\xE1mara Altar\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
-  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4715,6 +4717,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 1087587353}
+  animatorObjetivo: {fileID: 0}
+  nombreParametro: Abrir
 --- !u!1001 &311121339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5428,6 +5432,11 @@ PrefabInstance:
 --- !u!4 &343948177 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8567072719342825206, guid: f4bac38393fc7464b8860f011c565933, type: 3}
+  m_PrefabInstance: {fileID: 343948176}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &343948178 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8166682205180462307, guid: f4bac38393fc7464b8860f011c565933, type: 3}
   m_PrefabInstance: {fileID: 343948176}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &350045281
@@ -11209,8 +11218,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "C\xE1mara Entrada\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
-  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -17091,6 +17100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 1545630248}
+  animatorObjetivo: {fileID: 0}
+  nombreParametro: Abrir
 --- !u!1001 &1167002939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21010,6 +21021,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 68439789}
+  animatorObjetivo: {fileID: 0}
+  nombreParametro: Abrir
 --- !u!1001 &1472372014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22792,6 +22805,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetCamera: {fileID: 1629362149}
+  animatorObjetivo: {fileID: 343948178}
+  nombreParametro: estadoPuertas
 --- !u!1001 &1538295271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27754,8 +27769,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "C\xE1mara Bruja\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
-  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -29177,8 +29192,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "C\xE1mara Ata\xFAdes\n"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
-  m_sharedMaterial: {fileID: -9220085346957598247, guid: 883fa51749c63ca4d83a4e7525f420e8, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
