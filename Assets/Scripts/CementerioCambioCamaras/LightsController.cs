@@ -67,8 +67,6 @@ public class LightsController : MonoBehaviour
     
     [SerializeField] 
     private Sprite iconoLuzFarolasOff;
-
-
     private GameObject[] farolas;
 
 
@@ -87,7 +85,7 @@ public class LightsController : MonoBehaviour
             sliderIntensidadLuna.gameObject.GetComponent<Slider>().value = luzLuna.intensity;
         }
 
-        // Botones de la luna
+        // Outline de los botones de la luna
         for (int i = 0; i < botonesLuna.Length; i++)
         {
             Outline outline = botonesLuna[i].GetComponent<Outline>();
@@ -112,7 +110,7 @@ public class LightsController : MonoBehaviour
             }
         }
 
-        // Botones de las calabazas
+        // Outline de los botones de las calabazas
         for (int i = 0; i < botonesCalabazas.Length; i++)
         {
             Outline outline = botonesCalabazas[i].GetComponent<Outline>();
@@ -137,7 +135,7 @@ public class LightsController : MonoBehaviour
             }
         }
 
-        // Botones de las farolas
+        // Outline de los botones de las farolas
         for (int i = 0; i < botonesFarolas.Length; i++)
         {
             Outline outline = botonesFarolas[i].GetComponent<Outline>();
@@ -149,6 +147,8 @@ public class LightsController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Mostrar/ocultar el panel de cambio de cámara y luces al pulsar Escape
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (canvas.gameObject.activeSelf)
@@ -161,21 +161,6 @@ public class LightsController : MonoBehaviour
     #endregion
 
     #region Luna
-
-    public void CambiarIntensidadLuzLuna()
-    {
-        Light luzLuna = luna.GetComponent<Light>();
-        Slider slider = sliderIntensidadLuna.GetComponent<Slider>();
-
-        if (luzLuna != null && slider != null)
-        {
-            // Solo cambiar la intensidad si la luz está encendida
-            if (luzLuna.enabled)
-            {
-                luzLuna.intensity = slider.value;
-            }
-        }
-    }
 
     public void CambiarColorLuzLuna(GameObject boton)
     {
@@ -205,6 +190,21 @@ public class LightsController : MonoBehaviour
         }
     }
 
+    public void CambiarIntensidadLuzLuna()
+    {
+        Light luzLuna = luna.GetComponent<Light>();
+        Slider slider = sliderIntensidadLuna.GetComponent<Slider>();
+
+        if (luzLuna != null && slider != null)
+        {
+            // Solo cambiar la intensidad si la luz está encendida
+            if (luzLuna.enabled)
+            {
+                luzLuna.intensity = slider.value;
+            }
+        }
+    }
+
    public void ToggleLuzLuna()
     {
         Light luzLuna = luna.GetComponent<Light>();
@@ -230,7 +230,6 @@ public class LightsController : MonoBehaviour
         }
     }
 
-
     private void ActualizarSpriteBotonLuna()
     {
         if (botonApagarLuzLuna != null && luna != null)
@@ -247,10 +246,47 @@ public class LightsController : MonoBehaviour
         }
     }
 
-
     #endregion
 
     #region Calabazas
+
+    public void CambiarColorLuzCalabazas(GameObject boton)
+    {
+        if (calabazas != null && boton != null)
+        {
+            // Obtener el color del Image del botón
+            Image img = boton.GetComponent<Image>();
+            if (img != null)
+            {
+                Color colorCalabazas = img.color;
+
+                // Asignar el color a todas las luces de las calabazas
+                foreach (GameObject calabaza in calabazas)
+                {
+                    if (calabaza.transform.childCount > 0)
+                    {
+                        Transform hijo = calabaza.transform.GetChild(0);
+                        Light luz = hijo.GetComponent<Light>();
+
+                        if (luz != null)
+                        {
+                            luz.color = colorCalabazas;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Activar el Outline del botón seleccionado y desactivar el de los demás
+        foreach (Button b in botonesCalabazas)
+        {
+            Outline outline = b.GetComponent<Outline>();
+            if (outline != null)
+            {
+                outline.enabled = (b.gameObject == boton); // solo habilitar en el botón pulsado
+            }
+        }
+    }
 
     public void CambiarIntensidadLuzCalabazas()
     {
@@ -273,7 +309,6 @@ public class LightsController : MonoBehaviour
             }
         }
     }
-
 
     public void ToggleLuzCalabazas()
     {
@@ -324,27 +359,31 @@ public class LightsController : MonoBehaviour
         }
     }
 
-    public void CambiarColorLuzCalabazas(GameObject boton)
+    #endregion
+
+    #region Farolas
+
+    public void CambiarColorLuzFarolas(GameObject boton)
     {
-        if (calabazas != null && boton != null)
+        if (farolas != null && boton != null)
         {
             // Obtener el color del Image del botón
             Image img = boton.GetComponent<Image>();
             if (img != null)
             {
-                Color colorCalabazas = img.color;
+                Color colorFarolas = img.color;
 
-                // Asignar el color a todas las luces de las calabazas
-                foreach (GameObject calabaza in calabazas)
+                // Asignar el color a todas las luces de las farolas
+                foreach (GameObject farola in farolas)
                 {
-                    if (calabaza.transform.childCount > 0)
+                    if (farola.transform.childCount > 0)
                     {
-                        Transform hijo = calabaza.transform.GetChild(0);
+                        Transform hijo = farola.transform.GetChild(0);
                         Light luz = hijo.GetComponent<Light>();
 
                         if (luz != null)
                         {
-                            luz.color = colorCalabazas;
+                            luz.color = colorFarolas;
                         }
                     }
                 }
@@ -352,7 +391,7 @@ public class LightsController : MonoBehaviour
         }
 
         // Activar el Outline del botón seleccionado y desactivar el de los demás
-        foreach (Button b in botonesCalabazas)
+        foreach (Button b in botonesFarolas)
         {
             Outline outline = b.GetComponent<Outline>();
             if (outline != null)
@@ -361,10 +400,6 @@ public class LightsController : MonoBehaviour
             }
         }
     }
-
-    #endregion
-
-    #region Farolas
 
     public void CambiarIntensidadLuzFarolas()
     {
@@ -433,44 +468,6 @@ public class LightsController : MonoBehaviour
                 {
                     imagenBoton.sprite = luzPrimera.enabled ? iconoLuzFarolasOn : iconoLuzFarolasOff;
                 }
-            }
-        }
-    }
-
-    public void CambiarColorLuzFarolas(GameObject boton)
-    {
-        if (farolas != null && boton != null)
-        {
-            // Obtener el color del Image del botón
-            Image img = boton.GetComponent<Image>();
-            if (img != null)
-            {
-                Color colorFarolas = img.color;
-
-                // Asignar el color a todas las luces de las farolas
-                foreach (GameObject farola in farolas)
-                {
-                    if (farola.transform.childCount > 0)
-                    {
-                        Transform hijo = farola.transform.GetChild(0);
-                        Light luz = hijo.GetComponent<Light>();
-
-                        if (luz != null)
-                        {
-                            luz.color = colorFarolas;
-                        }
-                    }
-                }
-            }
-        }
-
-        // Activar el Outline del botón seleccionado y desactivar el de los demás
-        foreach (Button b in botonesFarolas)
-        {
-            Outline outline = b.GetComponent<Outline>();
-            if (outline != null)
-            {
-                outline.enabled = (b.gameObject == boton); // solo habilitar en el botón pulsado
             }
         }
     }
