@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-/// <summary>
+
 /// Script genérico para objetos animables con clic del ratón.
-/// Añade este componente al objeto que quieres animar (puerta, ataúd, jaula, etc.)
-/// </summary>
+/// Añadimos este script para poder hacer clic en objetos y activar animaciones (puertas, ataúdes, jaulas, etc.)
+
 public class ObjetoAnimableClick : MonoBehaviour
 {
     [Header("Configuración de Animación")]
@@ -19,17 +19,57 @@ public class ObjetoAnimableClick : MonoBehaviour
         // Si no se asignó animator, intentar obtenerlo del mismo objeto
         if (animator == null)
         {
-            animator = GetComponent<Animator>();
+            print("Falta asignar animator en " + gameObject.name);
         }
     }
 
-    private void OnMouseDown()
+    private void OnMouseDown()//clicamos y activamos animacion
     {
         if (animator != null)
         {
             // Obtener el estado actual del objeto y alternarlo (toggle) --> solo tenemos bools
             bool estadoActual = animator.GetBool(nombreParametro);
             animator.SetBool(nombreParametro, !estadoActual);
+            print("hoooooooolllllllllllllllllllliiiiiiiiiiiiiiiiiiii");
+        }
+    }
+
+    private void OnMouseEnter()
+    {
+        if (animator != null)
+        {
+            //queremos que se pongan de color rojo las dos puertas si señalamos una, hemmos hecho un padre con el script.
+            if (nombreParametro == "estadoPuertas")
+            {
+                MeshRenderer[] meshes = GetComponentsInChildren<MeshRenderer>();
+                foreach (var mesh in meshes)
+                {
+                    mesh.material.color = Color.red;
+                }
+            }
+            else
+            {
+                this.gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+            }
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        if (animator != null)
+        {
+            if (nombreParametro == "estadoPuertas")
+            {
+                MeshRenderer[] meshes = GetComponentsInChildren<MeshRenderer>();
+                foreach (var mesh in meshes)
+                {
+                    mesh.material.color = Color.white;
+                }
+            }
+            else
+            {
+                this.gameObject.GetComponent<MeshRenderer>().material.color = Color.white;
+            }
         }
     }
 

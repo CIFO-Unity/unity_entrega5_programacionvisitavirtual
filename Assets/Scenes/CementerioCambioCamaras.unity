@@ -989,7 +989,7 @@ GameObject:
   - component: {fileID: 276267596}
   - component: {fileID: 276267595}
   m_Layer: 5
-  m_Name: "Text_C\xE1maras"
+  m_Name: Text_Camaras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1113,6 +1113,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 276267593}
   m_CullTransparentMesh: 1
+--- !u!1 &285884042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 253076499540824404, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
+  m_PrefabInstance: {fileID: 5655719292181124911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &285884044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285884042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 350970dd90752c94887ddf889ea3ae97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 343948178}
+  nombreParametro: estadoPuertas
+--- !u!65 &285884045
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285884042}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.07, y: 4.33, z: 4.65}
+  m_Center: {x: 0.59, y: -0.41, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,7 +1307,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360926089}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 350970dd90752c94887ddf889ea3ae97, type: 3}
   m_Name: 
@@ -1291,7 +1331,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1.77, y: 1.36, z: 0.24}
   m_Center: {x: -2.5, y: 1.03, z: 0}
@@ -1579,46 +1619,6 @@ Light:
   m_CorrespondingSourceObject: {fileID: 8103115850216379315, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
   m_PrefabInstance: {fileID: 5655719292181124911}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &425099961 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6948374303928513551, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
-  m_PrefabInstance: {fileID: 5655719292181124911}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &425099965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425099961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 350970dd90752c94887ddf889ea3ae97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 694432158}
-  nombreParametro: estadoCaldero
---- !u!65 &425099966
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 425099961}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.5, y: 1.2, z: 1.5}
-  m_Center: {x: 0, y: -0.84, z: 0}
 --- !u!1 &470508965
 GameObject:
   m_ObjectHideFlags: 0
@@ -1685,8 +1685,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camarasPadre: {fileID: 822284788}
-  animatorObjetivo: {fileID: 0}
-  nombreParametro: estadoPuertas
 --- !u!4 &478809260
 Transform:
   m_ObjectHideFlags: 0
@@ -1967,7 +1965,6 @@ GameObject:
   - component: {fileID: 549088512}
   - component: {fileID: 549088511}
   - component: {fileID: 549088510}
-  - component: {fileID: 549088509}
   m_Layer: 5
   m_Name: ButtonCamaraEntrada
   m_TagString: Untagged
@@ -1995,21 +1992,6 @@ RectTransform:
   m_AnchoredPosition: {x: -163.0568, y: 278.01505}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &549088509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 549088507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691e1b5e80f174b4f93a38bab65eec2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camarasPadre: {fileID: 0}
-  animatorObjetivo: {fileID: 343948178}
-  nombreParametro: estadoPuertas
 --- !u!114 &549088510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2340,7 +2322,6 @@ GameObject:
   - component: {fileID: 617686524}
   - component: {fileID: 617686523}
   - component: {fileID: 617686522}
-  - component: {fileID: 617686521}
   m_Layer: 5
   m_Name: ButtonCamaraAltarLibro
   m_TagString: Untagged
@@ -2368,21 +2349,6 @@ RectTransform:
   m_AnchoredPosition: {x: -163.05678, y: 262.21942}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &617686521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617686519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691e1b5e80f174b4f93a38bab65eec2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camarasPadre: {fileID: 0}
-  animatorObjetivo: {fileID: 36988632}
-  nombreParametro: estadoLibros
 --- !u!114 &617686522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3734,7 +3700,6 @@ GameObject:
   - component: {fileID: 1108005361}
   - component: {fileID: 1108005360}
   - component: {fileID: 1108005359}
-  - component: {fileID: 1108005358}
   m_Layer: 5
   m_Name: ButtonBruja
   m_TagString: Untagged
@@ -3762,21 +3727,6 @@ RectTransform:
   m_AnchoredPosition: {x: -163.05678, y: 230.62819}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1108005358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1108005356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691e1b5e80f174b4f93a38bab65eec2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camarasPadre: {fileID: 0}
-  animatorObjetivo: {fileID: 0}
-  nombreParametro: Abrir
 --- !u!114 &1108005359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5006,6 +4956,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369449483}
   m_CullTransparentMesh: 1
+--- !u!1 &1396431538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 242821588358229389, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
+  m_PrefabInstance: {fileID: 5655719292181124911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1396431543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396431538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 350970dd90752c94887ddf889ea3ae97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 694432158}
+  nombreParametro: estadoCaldero
+--- !u!65 &1396431544
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396431538}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.73, y: 0.98, z: 0.73}
+  m_Center: {x: 0, y: 0.28, z: 0}
 --- !u!1 &1398257259
 GameObject:
   m_ObjectHideFlags: 0
@@ -5327,7 +5317,6 @@ GameObject:
   - component: {fileID: 1448570699}
   - component: {fileID: 1448570698}
   - component: {fileID: 1448570697}
-  - component: {fileID: 1448570696}
   m_Layer: 5
   m_Name: ButtonAtaudes
   m_TagString: Untagged
@@ -5355,21 +5344,6 @@ RectTransform:
   m_AnchoredPosition: {x: -163.05678, y: 246.42384}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1448570696
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1448570694}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691e1b5e80f174b4f93a38bab65eec2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camarasPadre: {fileID: 0}
-  animatorObjetivo: {fileID: 0}
-  nombreParametro: Abrir
 --- !u!114 &1448570697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6750,7 +6724,6 @@ GameObject:
   - component: {fileID: 1976372343}
   - component: {fileID: 1976372342}
   - component: {fileID: 1976372341}
-  - component: {fileID: 1976372340}
   m_Layer: 5
   m_Name: ButtonFantasmas
   m_TagString: Untagged
@@ -6778,21 +6751,6 @@ RectTransform:
   m_AnchoredPosition: {x: -163.05678, y: 214.83258}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1976372340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976372338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 691e1b5e80f174b4f93a38bab65eec2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camarasPadre: {fileID: 0}
-  animatorObjetivo: {fileID: 0}
-  nombreParametro: Abrir
 --- !u!114 &1976372341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7597,6 +7555,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2595860937411673150, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 360926091}
+    - targetCorrespondingSourceObject: {fileID: 253076499540824404, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 285884045}
+    - targetCorrespondingSourceObject: {fileID: 253076499540824404, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 285884044}
     - targetCorrespondingSourceObject: {fileID: 4876255505574189128, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 175175604}
@@ -7609,12 +7573,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5528959957317807226, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1995160340}
-    - targetCorrespondingSourceObject: {fileID: 6948374303928513551, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 242821588358229389, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 425099965}
-    - targetCorrespondingSourceObject: {fileID: 6948374303928513551, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
+      addedObject: {fileID: 1396431544}
+    - targetCorrespondingSourceObject: {fileID: 242821588358229389, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 425099966}
+      addedObject: {fileID: 1396431543}
     - targetCorrespondingSourceObject: {fileID: 5373435746512963560, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 166398554}
