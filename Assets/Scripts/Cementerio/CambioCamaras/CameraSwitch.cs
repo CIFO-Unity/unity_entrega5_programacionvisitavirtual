@@ -3,9 +3,8 @@ using UnityEngine.EventSystems;
 
 public class CameraSwitch : MonoBehaviour
 {
-    [Header("Cámara a Activar")]
-    [Tooltip("La cámara que se activará al hacer clic en el botón")]
-    [SerializeField] private Camera targetCamera;
+    [Header("Padre a Activar")]
+    [SerializeField] private GameObject camarasPadre;
 
     [Header("Animación al Hacer Clic")]
     [Tooltip("El Animator que se activará con el clic del ratón")]
@@ -14,18 +13,43 @@ public class CameraSwitch : MonoBehaviour
     [Tooltip("Nombre del parámetro del Animator (ej: 'Abrir', 'estadoPuertas')")]
     [SerializeField] private string nombreParametro = "estadoPuertas";
 
+
+    private void Start()
+    {
+        cambiarCamaras(0);
+    }
     private void Update()
     {
-        // Verificar si MI cámara está activa Y si hay animador asignado
+
+    }
+
+    public void cambiarCamaras(int posicionBotonCamara)
+    {
+        for (int i = 0; i < camarasPadre.transform.childCount; i++)
+        {
+            camarasPadre.transform.GetChild(i).gameObject.SetActive(false);            
+        }
+        
+        camarasPadre.transform.GetChild(posicionBotonCamara).gameObject.SetActive(true);
+    }
+
+
+    /* 
+    
+     private void Update()
+    {
+    // Verificar si MI cámara está activa Y si hay animador asignado
         // IMPORTANTE: No ejecutar si el clic es sobre UI
-        if (targetCamera != null && targetCamera.enabled && 
+        if (targetCamera != null && targetCamera.enabled &&
             animatorObjetivo != null && Input.GetKeyDown(KeyCode.Mouse0) &&
             !EstoyClicandoEnUI())
         {
             EjecutarAnimacion();
         }
-    }
-
+    
+     }
+    
+    
     public void ActivateThisCamera()
     {
         if (targetCamera == null)
@@ -35,6 +59,9 @@ public class CameraSwitch : MonoBehaviour
         }
 
         // Desactivar todas las cámaras de la escena
+        //podríamos guardar en un gameobject todas las camaras que queremos desactivar, aqui lo hacemos genérico.
+        //con GetChild(i) y un for podríamos recorrer solo las cámaras hijas de un objeto específico.
+
         Camera[] allCameras = FindObjectsByType<Camera>(FindObjectsSortMode.None);
         foreach (Camera cam in allCameras)
         {
@@ -43,7 +70,7 @@ public class CameraSwitch : MonoBehaviour
         
         // Activar solo la cámara objetivo
         targetCamera.enabled = true;
-    }
+    } */
 
     private void EjecutarAnimacion()
     {
@@ -54,7 +81,7 @@ public class CameraSwitch : MonoBehaviour
             animatorObjetivo.SetBool(nombreParametro, !animatorObjetivo.GetBool(nombreParametro));
         }
 
-        
+
 
     }
 
