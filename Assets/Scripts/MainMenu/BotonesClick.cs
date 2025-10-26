@@ -10,6 +10,11 @@ public class BotonesClick : MonoBehaviour
 
     private string escenaPrimeraPersona = "CementerioPrimeraPersona";
 
+private void Start()
+    {
+        // Cursor del sistema (por si nos llaman desde FPS y q tenemos oculto allí.)
+        Cursor.visible = true;
+    }
     public void CargarEscenaCambioCamaras()
     {
         SceneManager.LoadScene(escenaCambioCamaras);
