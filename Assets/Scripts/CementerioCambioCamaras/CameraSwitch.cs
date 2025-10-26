@@ -34,25 +34,14 @@ public class CameraSwitch : MonoBehaviour
             return;
         }
 
-        // PRIMERO: Resetear todas las animaciones
-        CameraSwitch[] todosLosSwitches = FindObjectsByType<CameraSwitch>(FindObjectsSortMode.None);
-        foreach (CameraSwitch cs in todosLosSwitches)
-        {
-            if (cs.animatorObjetivo != null)
-            {
-                // Resetear el parámetro a false
-                cs.animatorObjetivo.SetBool(cs.nombreParametro, false);
-            }
-        }
-
-        // SEGUNDO: Desactivar todas las cámaras de la escena
+        // Desactivar todas las cámaras de la escena
         Camera[] allCameras = FindObjectsByType<Camera>(FindObjectsSortMode.None);
         foreach (Camera cam in allCameras)
         {
             cam.enabled = false;
         }
         
-        // TERCERO: Activar solo la cámara objetivo
+        // Activar solo la cámara objetivo
         targetCamera.enabled = true;
     }
 
