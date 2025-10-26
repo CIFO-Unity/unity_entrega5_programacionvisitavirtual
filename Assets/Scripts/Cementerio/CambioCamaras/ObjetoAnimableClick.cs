@@ -30,7 +30,6 @@ public class ObjetoAnimableClick : MonoBehaviour
             // Obtener el estado actual del objeto y alternarlo (toggle) --> solo tenemos bools
             bool estadoActual = animator.GetBool(nombreParametro);
             animator.SetBool(nombreParametro, !estadoActual);
-            print("hoooooooolllllllllllllllllllliiiiiiiiiiiiiiiiiiii");
         }
     }
 
