@@ -9,7 +9,7 @@ public class CameraSwitch : MonoBehaviour
     [Header("Animación al Hacer Clic")]
     [Tooltip("El Animator que se activará con el clic del ratón")]
     [SerializeField] private Animator animatorObjetivo;
-    
+
     [Tooltip("Nombre del parámetro del Animator (ej: 'Abrir', 'estadoPuertas')")]
     [SerializeField] private string nombreParametro = "estadoPuertas";
 
@@ -18,6 +18,7 @@ public class CameraSwitch : MonoBehaviour
     {
         cambiarCamaras(0);
     }
+
     private void Update()
     {
 
@@ -27,14 +28,67 @@ public class CameraSwitch : MonoBehaviour
     {
         for (int i = 0; i < camarasPadre.transform.childCount; i++)
         {
-            camarasPadre.transform.GetChild(i).gameObject.SetActive(false);            
+            camarasPadre.transform.GetChild(i).gameObject.SetActive(false);
         }
-        
+
         camarasPadre.transform.GetChild(posicionBotonCamara).gameObject.SetActive(true);
     }
 
 
-    /* 
+
+
+/*     private void EjecutarAnimacion()
+    {
+        if (animatorObjetivo != null)
+        {
+            // Alternar el estado de la puerta
+
+            animatorObjetivo.SetBool(nombreParametro, !animatorObjetivo.GetBool(nombreParametro));
+        }
+
+
+
+    } */
+
+    private bool EstoyClicandoEnUI()
+    {
+        // Verificar si el EventSystem existe
+        if (EventSystem.current == null)
+            return false;
+
+        // Crear datos del evento del puntero
+        PointerEventData pointerData = new PointerEventData(EventSystem.current)
+        {
+            position = Input.mousePosition
+        };
+
+        // Hacer raycast para ver qué elementos UI están bajo el puntero
+        var resultados = new System.Collections.Generic.List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, resultados);
+
+        // Verificar si hay un Panel (o cualquier elemento con Image/RawImage que bloquee raycast)
+        foreach (RaycastResult resultado in resultados)
+        {
+            // Si tiene un componente Image o RawImage con raycastTarget activado
+            var image = resultado.gameObject.GetComponent<UnityEngine.UI.Image>();
+            var rawImage = resultado.gameObject.GetComponent<UnityEngine.UI.RawImage>();
+
+            if ((image != null && image.raycastTarget) ||
+                (rawImage != null && rawImage.raycastTarget))
+            {
+                return true; // Estamos sobre un panel u otro elemento UI
+            }
+        }
+
+        return false; // No hay elementos UI bajo el puntero
+    }
+}
+
+
+//NOTAS
+
+
+/* 
     
      private void Update()
     {
@@ -70,51 +124,6 @@ public class CameraSwitch : MonoBehaviour
         
         // Activar solo la cámara objetivo
         targetCamera.enabled = true;
-    } */
-
-    private void EjecutarAnimacion()
-    {
-        if (animatorObjetivo != null)
-        {
-            // Alternar el estado de la puerta
-
-            animatorObjetivo.SetBool(nombreParametro, !animatorObjetivo.GetBool(nombreParametro));
-        }
-
-
-
-    }
-
-    private bool EstoyClicandoEnUI()
-    {
-        // Verificar si el EventSystem existe
-        if (EventSystem.current == null)
-            return false;
-
-        // Crear datos del evento del puntero
-        PointerEventData pointerData = new PointerEventData(EventSystem.current)
-        {
-            position = Input.mousePosition
-        };
-
-        // Hacer raycast para ver qué elementos UI están bajo el puntero
-        var resultados = new System.Collections.Generic.List<RaycastResult>();
-        EventSystem.current.RaycastAll(pointerData, resultados);
-
-        // Verificar si hay un Panel (o cualquier elemento con Image/RawImage que bloquee raycast)
-        foreach (RaycastResult resultado in resultados)
-        {
-            // Si tiene un componente Image o RawImage con raycastTarget activado
-            var image = resultado.gameObject.GetComponent<UnityEngine.UI.Image>();
-            var rawImage = resultado.gameObject.GetComponent<UnityEngine.UI.RawImage>();
-            
-            if ((image != null && image.raycastTarget) || 
-                (rawImage != null && rawImage.raycastTarget))
-            {
-                return true; // Estamos sobre un panel u otro elemento UI
-            }
-        }
-
-        return false; // No hay elementos UI bajo el puntero
-    }
-}
+    } 
+    
+    */
