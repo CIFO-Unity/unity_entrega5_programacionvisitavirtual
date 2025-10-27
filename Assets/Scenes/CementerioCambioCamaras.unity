@@ -471,7 +471,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
-  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -901,7 +901,7 @@ MonoBehaviour:
   m_text: Farolas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
-  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1037,7 +1037,7 @@ MonoBehaviour:
   m_text: "C\xE1maras"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
-  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1397,7 +1397,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
-  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1533,7 +1533,7 @@ MonoBehaviour:
   m_text: Calabazas
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
-  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1609,11 +1609,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383450046}
   m_CullTransparentMesh: 1
---- !u!1 &410087039 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9005645625755973818, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
-  m_PrefabInstance: {fileID: 5655719292181124911}
-  m_PrefabAsset: {fileID: 0}
 --- !u!108 &410087040 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 8103115850216379315, guid: 6b4386f45be25413dae28e3b7489eaf4, type: 3}
@@ -1877,7 +1872,7 @@ MonoBehaviour:
   m_text: Intensidad
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
-  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3017,7 +3012,7 @@ MonoBehaviour:
   m_text: Intensidad
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
-  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3155,7 +3150,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
-  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4083,7 +4078,7 @@ MonoBehaviour:
   m_text: "Ata\xFAdes\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
-  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4221,7 +4216,7 @@ MonoBehaviour:
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
-  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4801,7 +4796,7 @@ MonoBehaviour:
   m_text: Luna
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
-  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6372,7 +6367,7 @@ MonoBehaviour:
   m_text: Intensidad
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
-  m_sharedMaterial: {fileID: 2280556940779312886, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
+  m_sharedMaterial: {fileID: 5378407063391217181, guid: 49c98fd53aa15487dbaa10e19ea666ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7412,32 +7407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f13e744ae774a968d9d68e99bf1a1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 246498926}
-  luna: {fileID: 410087039}
-  botonesLuna:
-  - {fileID: 1330816398}
-  - {fileID: 85545622}
-  - {fileID: 755777781}
-  sliderIntensidadLuna: {fileID: 2059391010}
-  botonApagarLuzLuna: {fileID: 1433785479}
-  iconoLuzLunaOn: {fileID: 21300000, guid: 2fdaf25884e98d8468f6fa7d995c5af4, type: 3}
-  iconoLuzLunaOff: {fileID: 21300000, guid: 31681f5da47536b4ea0096be4a373131, type: 3}
-  botonesCalabazas:
-  - {fileID: 2027479896}
-  - {fileID: 1969058786}
-  - {fileID: 1186165643}
-  sliderIntensidadCalabazas: {fileID: 624865320}
-  botonApagarCalabazas: {fileID: 553245503}
-  iconoLuzCalabazasOn: {fileID: 21300000, guid: 2fdaf25884e98d8468f6fa7d995c5af4, type: 3}
-  iconoLuzCalabazasOff: {fileID: 21300000, guid: 31681f5da47536b4ea0096be4a373131, type: 3}
-  botonesFarolas:
-  - {fileID: 1683141640}
-  - {fileID: 2004862414}
-  - {fileID: 1314096608}
-  sliderIntensidadFarolas: {fileID: 1421734928}
-  botonApagarFarolas: {fileID: 654058416}
-  iconoLuzFarolasOn: {fileID: 21300000, guid: 2fdaf25884e98d8468f6fa7d995c5af4, type: 3}
-  iconoLuzFarolasOff: {fileID: 21300000, guid: 31681f5da47536b4ea0096be4a373131, type: 3}
 --- !u!4 &2094110753
 Transform:
   m_ObjectHideFlags: 0
