@@ -148,14 +148,15 @@ public class LightsController : MonoBehaviour
     void Update()
     {
         // Mostrar/ocultar el panel de cambio de cámara y luces al pulsar Escape
+        // --> Eliminado; ahora los paneles de cámara y luces se muestran al hacer click en un botón del mismo panel
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        /*if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (canvas.gameObject.activeSelf)
                 canvas.gameObject.SetActive(false);
             else
                 canvas.gameObject.SetActive(true);
-        }
+        }*/
     }
 
     #endregion
