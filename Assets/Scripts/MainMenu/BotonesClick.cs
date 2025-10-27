@@ -14,6 +14,7 @@ private void Start()
     {
         // Cursor del sistema (por si nos llaman desde FPS y q tenemos oculto allí.)
         Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
     public void CargarEscenaCambioCamaras()
     {
